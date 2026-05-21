@@ -8,5 +8,7 @@ jobs:
         run: cat /etc/os-release
       - name: kernel version, architecture and hostname
         run: uname -a
+      - name: install inxi
+        run: sudo apt-get update && sudo apt-get install -y inxi
       - name: full system summary including kernel version, ram, disk, cpu, gpu, network
         run: inxi -F
