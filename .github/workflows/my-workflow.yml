@@ -1,7 +1,7 @@
 name: my first workflow
 on: workflow_dispatch
 jobs:
-  job:
+  job-1:
     runs-on: ubuntu-latest
     steps:
       - name: print working directory
@@ -14,3 +14,8 @@ jobs:
         run: ls -a
       - name: run nodejs file
         run: node app.js
+  job-2:
+    runs-on: ubuntu-latest
+    steps:
+      - name: disk usage
+        run: du -h --max-depth=1
