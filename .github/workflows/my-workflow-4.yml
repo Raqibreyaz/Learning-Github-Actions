@@ -1,0 +1,7 @@
+name: my fourth workflow
+on: push
+jobs:
+  job:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo ${{5 < 4}}
