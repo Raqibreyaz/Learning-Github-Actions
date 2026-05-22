@@ -24,9 +24,6 @@ jobs:
     steps:
       - name: Print Nodejs version
         run: node -v
-      
-      - name: Print pnpm version
-        run: pnpm -v
 
       - name: Install another version of node
         uses: actions/setup-node@v6
