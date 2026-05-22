@@ -1,11 +1,19 @@
 name: my fourth workflow
 on: push
+env: #scoped globally
+  TEST: my test variable
+  HELLO: hello world
 jobs:
-  job:
+  job-1:
     runs-on: ubuntu-latest
+    env: #job level scoped
+        LOCAL: local
     steps:
-    #   - run: echo "${{toJson(github)}}"
-      - run: echo "${{toJson(env)}}"
+      #   - run: echo "${{toJson(github)}}"
+      - name:
+        env: #scoped to this step
+          HI: hi
+        run: echo "${{toJson(env)}}"
       - run: echo "${{toJson(vars)}}"
       - run: echo "${{toJson(secrets)}}"
       - run: echo "${{toJson(runner)}}"
